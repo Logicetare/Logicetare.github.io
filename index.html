@@ -1,7 +1,7 @@
 <?php
 ob_start();
-require_once 'includes/db.php';
-require_once 'includes/init.php';
+require_once 'includes/db.php
+require_once 'includes/init.php
 if (!($user -> LoggedIn()))
 {
 	header('location: login.php');
@@ -61,7 +61,7 @@ $userInfo = $plansql -> fetch(PDO::FETCH_ASSOC);
 						<span><?php echo $pageon ?></span>
 					</h1>
 					<ul class="main-header__breadcrumb">
-						<li><a href="#" onclick="return false;"><?php include 'includes/name.php'; ?></a></li>
+						<li><a href="#" onclick="return false;"><?php include 'includes/name.php ?></a></li>
 						<li><a href="#" onclick="return false;"><?php echo $pageon ?></a></li>
 						
 					</ul>
@@ -80,7 +80,7 @@ $userInfo = $plansql -> fetch(PDO::FETCH_ASSOC);
 			<div data-tab-radio="tab-radio" class="tab-radio-content row" id="today">
 					<div class="main-stats__stat col-md-3 col-sm-3">
 						<h3 class="main-stats__title">Welcome</h3>
-						<p class="main-stats__resume">Welcome to <?php include 'includes/name.php'; ?>! We hope you enjoy your stay with us. </p>
+						<p class="main-stats__resume">Welcome to <?php include 'includes/name.php ?>! We hope you enjoy your stay with us. </p>
 						
 					</div> <!-- /col -->
 				  
@@ -190,7 +190,7 @@ $userInfo = $plansql -> fetch(PDO::FETCH_ASSOC);
 						</center>
 <?php
 	} else {
-		echo '<div class="alert alert-error">There is no latest news!</div>';
+		<div class="alert alert-error">There is no latest news!</div>
 	}
 ?>
 					
@@ -224,18 +224,18 @@ $userInfo = $plansql -> fetch(PDO::FETCH_ASSOC);
 	{
 		while ($row = $fetchServers->fetch(PDO::FETCH_ASSOC))
 		{
-			echo '
+			
 										<tr class="spacer"></tr>
 											<tr>
 									  			<td class="text-left">
 									  				' . htmlentities($row['name']) . '
 									  			</td>
 									  			<td>' . htmlentities($row['strength']) . '</td>
-									  			<td style="font-size:19pt;color:' . ($row['status'] == "good" ? "lime" : ($row['status'] == "caution" ? "orange" : ($row['status'] == "gone" ? "red" : "black"))) .';">
+									  			<td style="font-size:19pt;color:' . ($row['status'] == "good" ? "lime" : ($row['status'] == "caution" ? "orange" : ($row['status'] == "gone" ? "red" : "black"))) .">
 									  				<i class="pe-7s-' . ($row['status'] == "good" ? "check" : ($row['status'] == "caution" ? "attention" : ($row['status'] == "gone" ? "close-circle" : "help1"))) . '"></i>
 									  			</td>
 									  		</tr>
-											';
+											
 		}
 	}
 ?>
@@ -335,7 +335,7 @@ if ($fetchUsers->rowCount() <= 7) {
 			chart.addChartCursor(chartCursor);
 			chartCursor.categoryBalloonAlpha = 0.2;
 			chartCursor.cursorAlpha = 0.2;
-			chartCursor.cursorColor = 'rgba(255,255,255,.8)';
+			chartCursor.cursorColor = 'rgba(255,255,255,.8)
 			chartCursor.categoryBalloonEnabled = false;
 			chart.write("chartAttacks");
 		});
